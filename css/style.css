@@ -1,0 +1,24 @@
+
+.container{
+    display: flex;
+    margin: auto;
+}
+.table{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: black solid;
+    
+}
+.card{
+    display: flex;
+}
+.frontface{
+    position: relative;
+}
+.backface{
+    position: absolute;
+}
+h1{
+    border : black solid;
+}
