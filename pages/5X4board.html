@@ -4,138 +4,153 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Memory Card Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/Icons8-Ios7-Gaming-Cards.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
     <script src="../js/main.js"></script>
 </head>
 <body>
     <div class="banner">
-        <h3>5X4 Board</h3>
-        <p><a href="../index.html">Home</a></p>        
+        <h3>Hard</h3>
+        <p><a href="../index.html">Main menu</a></p>        
     </div>
+    <div class="count">Turns taken: <span class="turns">0</span></div>
     <div class="container">
         <div class="table">
             <div class="card" data-img="pairone">
-                <div class="front"></div>
-                <div class="back">
-                    1
-                </div>    
-            </div>
-            <div class="card" data-img="pairone">
-                <div class="front"></div>
-                <div class="back">
-                    1
-                </div>    
-            </div>
-            <div class="card" data-img="pairtwo">
-                <div class="front"></div>
-                <div class="back">
-                    2
-                </div>    
-            </div>
-            <div class="card" data-img="pairtwo">
-                <div class="front"></div>
-                <div class="back">
-                    2
-                </div>    
-            </div>
-            <div class="card" data-img="pairthree">
-                <div class="front"></div>
-                <div class="back">
-                    3
-                </div>    
-            </div>
-            <div class="card" data-img="pairthree">
-                <div class="front"></div>
-                <div class="back">
-                    3
-                </div>    
-            </div> 
-            <div class="card" data-img="pairfour">
-                <div class="front"></div>
-                <div class="back">
-                    4
-                </div>    
-            </div> 
-            <div class="card" data-img="pairfour">
-                <div class="front"></div>
-                <div class="back">
-                    4
-                </div>    
-            </div> 
-            <div class="card" data-img="pairfive">
-                <div class="front"></div>
-                <div class="back">
-                    5
-                </div>    
-            </div> 
-            <div class="card" data-img="pairfive">
-                <div class="front"> </div>
-                <div class="back">
-                    5
-                </div>    
-            </div> 
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_clubs.png" alt="ace_of_clubs">
+                    </div>    
+                </div>
+                <div class="card" data-img="pairone">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_clubs.png" alt="ace_of_clubs">
+                    </div>    
+                </div>
+                <div class="card" data-img="pairtwo">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_spades.png" alt="ace_of_spades">
+                    </div>    
+                </div>
+                <div class="card" data-img="pairtwo">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_spades.png" alt="ace_of_spades">
+                    </div>    
+                </div>
+                <div class="card" data-img="pairthree">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_hearts.png" alt="ace_of_hearts">
+                    </div>    
+                </div>
+                <div class="card" data-img="pairthree">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_hearts.png" alt="ace_of_hearts">
+                    </div>    
+                </div> 
+                <div class="card" data-img="pairfour">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_diamonds.png" alt="ace_of_diamonds">
+                    </div>    
+                </div> 
+                <div class="card" data-img="pairfour">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/ace_of_diamonds.png" alt="ace_of_diamonds">
+                    </div>    
+                </div> 
+                <div class="card" data-img="pairfive">
+                    <div class="front"></div>
+                    <div class="back">
+                        <img src="../img/black_joker.png" alt="black_joker">
+                    </div>    
+                </div> 
+                <div class="card" data-img="pairfive">
+                    <div class="front"> </div>
+                    <div class="back">
+                        <img src="../img/black_joker.png" alt="black_joker">
+                    </div>    
+                </div> 
             <div class="card" data-img="pairsix">
                 <div class="front"></div>
                 <div class="back">
-                    6
+                    <img src="../img/king_of_clubs2.png" alt="king_of_clubs2">
                 </div>    
             </div>
             <div class="card" data-img="pairsix">
                 <div class="front"></div>
                 <div class="back">
-                    6
+                    <img src="../img/king_of_clubs2.png" alt="king_of_clubs2">
                 </div>    
             </div>
             <div class="card" data-img="pairseven">
                 <div class="front"></div>
                 <div class="back">
-                    7
+                    <img src="../img/king_of_spades2.png" alt="king_of_spades2">
                 </div>    
             </div>
             <div class="card" data-img="pairseven">
                 <div class="front"></div>
                 <div class="back">
-                    7
+                    <img src="../img/king_of_spades2.png" alt="king_of_spades2">
                 </div>    
             </div>
             <div class="card" data-img="paireight">
                 <div class="front"></div>
                 <div class="back">
-                    8
+                    <img src="../img/king_of_hearts2.png" alt="king_of_hearts2">
                 </div>    
             </div>
             <div class="card" data-img="paireight">
                 <div class="front"></div>
                 <div class="back">
-                    8
+                    <img src="../img/king_of_hearts2.png" alt="king_of_hearts2">
                 </div>    
             </div> 
             <div class="card" data-img="pairnine">
                 <div class="front"></div>
                 <div class="back">
-                    9
+                    <img src="../img/king_of_diamonds2.png" alt="king_of_diamonds2">
                 </div>    
             </div> 
             <div class="card" data-img="pairnine">
                 <div class="front"></div>
                 <div class="back">
-                    9
+                    <img src="../img/king_of_diamonds2.png" alt="king_of_diamonds2">
                 </div>    
             </div> 
             <div class="card" data-img="pairten">
                 <div class="front"></div>
                 <div class="back">
-                    10
+                    <img src="../img/red_joker.png" alt="red_joker">
                 </div>    
             </div> 
             <div class="card" data-img="pairten">
                 <div class="front"> </div>
                 <div class="back">
-                    10
+                    <img src="../img/red_joker.png" alt="red_joker">
                 </div>    
             </div> 
         </div>
     </div>
+    <div class="secondcontainer">
+        <button id="reset_button">Click here to reset</button>
+    </div>
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>CONGRATULATIONS!!!</p>
+        </div>
+    </div>
+        
 </body>
 </html>
