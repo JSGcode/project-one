@@ -1,6 +1,6 @@
 // ======Load HTML page====== //
 document.addEventListener("DOMContentLoaded", function(){
-// Create Class second try at OOP //
+// Created Class second try at Object Oriented Programming //
     class NewGame{
         // Constructor for the class, variables that will be used in the methods//
         constructor(){
@@ -14,23 +14,26 @@ document.addEventListener("DOMContentLoaded", function(){
             this.modal = document.getElementById('myModal');
             this.btn = document.getElementById("myBtn");
             this.span = document.getElementsByClassName("close")[0];
+            this.modalcounter = document.getElementsByClassName("outputturn");
             this.counter = 0;
             this.flipped = true;
             this.pairsMatched = 0;
-            this.firstCard;
-            this.secondCard;
+            this.firstCard = null;
+            this.secondCard = null;
         }
 
         // this will be the main method that will control the behavior of cards//
         main(){
-            // declared variables for this method //
+            // declared variables and instantiate methods //
             var location = this;
             this.shuffle();
+            this.hardReset()
+
             // for each loop adds click listeners to all cards //
             this.allCards.forEach(cards => cards.addEventListener('click', function(){
+                
                 // ==changes class to create the flip effect== //   
                 this.classList.add('flip');
-
                 if (location.firstCard === this) {
                     return;
                 }
@@ -38,17 +41,15 @@ document.addEventListener("DOMContentLoaded", function(){
                     location.firstCard = this;
                     location.firstCard.removeEventListener('click', this);      
                     location.flipped = false; 
-                    location.turns();
                 }else{
                     location.secondCard = this;
                     location.secondCard.removeEventListener('click', this);
                     location.flipped = true;  
                     location.turns();
                     //==Matching and Unmatched Logic==//
-                    if (location.flipped === true && location.firstCard.dataset.img === location.secondCard.dataset.img) {
-                        console.log('matched pair');
-                        location.reset()
+                    if ((location.flipped === true) && (location.firstCard.dataset.img === location.secondCard.dataset.img)) {
                         location.winTrigger();
+                        location.reset()
                     }else{
                         setTimeout(function() {
                             location.firstCard.classList.remove('flip');
@@ -74,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function(){
         turns(){
             this.counter++
             this.turnCounter[0].innerText = this.counter;
-            console.log(this.counter);   
         }
         winTrigger(){
             const location = this;
@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             }, 400);
             this.pairsMatched++;
-            console.log(this.pairsMatched);
         }
         hardReset(){
             const location = this;
@@ -105,29 +104,20 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         modalBox(){
             const location = this;
-            location.modal.style.display = "block";
-            location.span.onclick = function() {
-            location.modal.style.display = "none";
+            this.modal.style.display = "block";
+            location.modalcounter[0].innerText = location.counter;
+            this.span.onclick = function() {
+                location.modal.style.display = "none";
             }
             window.onclick = function(event) {
-                if (event.target == modal) {
+                if (event.target == location.modal) {
                     location.modal.style.display = "none";
                 }
             }
         }
-        
     } //End Of Class
-
-    // ===Instantiate the class=== //
+        
+    // ===Instantiate the new class=== //
     const MemoryGame = new NewGame();
     MemoryGame.main();
-    console.log(MemoryGame.hardReset());
-
-    //=========== testing modal javascript ==========//
-
-
-    // When the user clicks on the button, open the modal 
-
-    
-
 }) // End of DOMContentloaded
