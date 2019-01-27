@@ -1,3 +1,4 @@
+
 # Sparta Core Project 1 - Concentration Game
 Code and images for the concentration card game.
 
@@ -33,6 +34,5 @@ The Project was designed using Microsoft Visual Studio. The following was implem
 Google Chrome's console was used for debugging to check functions were working as desired
 
 # Usage
-Game can be found on Github pages using the following link:
-It is also possible to clone the repo all files are included. Once it has been cloned open the index.html using your browser (prefferably Google Chrome).
-
+The game can be found on Github pages using the following link: TBA
+It is also possible to clone the repo all files are included. Once it has been cloned open the index.html using your browser (preferably Google Chrome).
