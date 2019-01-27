@@ -1,24 +1,175 @@
-
-.container{
+html{
+    font-size: 30pt;
+    background-color: rgb(0, 50, 83);
+    font-family: 'Righteous', cursive;
+}
+body{
+    text-align: center;
     display: flex;
+    flex-direction: column;;
     margin: auto;
+    justify-content: center;
+}
+.banner{
+    margin: 0px 80px 20px 80px;
+    text-align: center;
+    border: 10px double black;
+    background-color: white;
+    border-radius: 50px;
+    margin-bottom: 0px;
+
+}
+.introduction{
+    margin: 20px;
+    padding: 50px;
+    text-align: center;
+    border: 20px double black;
+    background-color: white;
+    border-radius: 50px;
+
+}
+h1{
+    color: rgb(132, 181, 253);
+    text-shadow: 3px 5px 2px rgba(33, 33, 41, 0.616);
+}
+h3{
+    color: rgb(132, 181, 253);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.616);
+    margin-bottom: -20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 47, 47);
+    text-shadow: 1px 1px 1px black;
+    margin: 50px;
+}
+a:hover{
+    color: rgb(0, 50, 83);
+    font-weight: bold;
+}
+.count{
+    color: white;
+    text-align: center;
+    transform: translateY(30px)
+}
+.turns{
+    color: gold;
+}
+.outputturn{
+    color: gold;
+    text-shadow: 1px 1px 1px black;
+}
+/* styling of divs such as the table - Main part of the webpage */
+.container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;  
 }
 .table{
     display: flex;
+    width: 550px;
+    height: auto;
     flex-wrap: wrap;
     flex-direction: row;
     border: black solid;
-    
+    perspective: 1000px;
+    background-image: url('../img/wood.jpg');
+    background-size: contain;
+    background-size: cover;
+    box-shadow: 5px 5px 5px black;
 }
 .card{
-    display: flex;
-}
-.frontface{
+    height: 130px;
+    width: 90px;
+    margin: 10px;
     position: relative;
+    transform: scale(1);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 25px;
 }
-.backface{
+.card:hover{
+    transform: scale(.95);
+    transition: 0.2s;
+}
+.card.flip{
+    transform: rotatey(180deg);
+    transition: 0.5s;
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     position: absolute;
+    background-color: white;
 }
-h1{
-    border : black solid;
+.front{
+    background-image: url('../img/cardback.png');
+    background-size: contain;
+    border-radius: 5px;
 }
+.back{
+    transform: rotateY(180deg);
+    text-align: center;
+    border-radius: 5px;
+}
+img{
+    max-width: 100%;
+}
+button{
+    transform: translateY(-40px);
+    width: 250px;
+    padding: 15px;
+    font-size: 15pt;
+    background: rgb(132, 181, 253);
+    color : rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    border: 5px solid rgb(206, 206, 206);
+    box-shadow: 5px 5px 5px black;
+    font-family: 'Righteous', cursive;
+    border-radius: 50px;
+    outline: none;
+}
+button:active{
+    transform: scale(0.98) translateY(-40px);
+}
+
+/* =====Modal styling box, credit goes to W3Schools========= */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 60px;
+    border: 1px solid #888;
+    width: 80%; 
+    border-radius: 50px; 
+    border: 10px double gold;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
