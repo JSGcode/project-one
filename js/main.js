@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         // this will be the main method that will control the behavior of cards//
         main(){
-            // declared variables and instantiate methods //
+            // declared variables and instantiate methods, location is assigned the value of 'this' since it changes value //
             var location = this;
             this.shuffle();
             this.hardReset()
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     location.secondCard.removeEventListener('click', this);
                     location.flipped = true;  
                     location.turns();
-                    //==Matching and Unmatched Logic==//
+                    //==Matching and Unmatched cards Logic==//
                     if ((location.flipped === true) && (location.firstCard.dataset.img === location.secondCard.dataset.img)) {
                         location.winTrigger();
                         location.reset()
@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }, 400);
             this.pairsMatched++;
         }
+        // all values are set back to their default values and all cards are flipped over //
         hardReset(){
             const location = this;
             this.button.addEventListener('click', function() {
@@ -110,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 location.modal.style.display = "none";
             }
             window.onclick = function(event) {
-                if (event.target == location.modal) {
+                if (event.target === location.modal) {
                     location.modal.style.display = "none";
                 }
             }
